@@ -18,7 +18,7 @@ public class Worker {
     public Worker(){
     }
 
-    public Worker(String name, WorkerLevel level, Double baseSalary, List<HourContract> list, Department department) {
+    public Worker(String name, WorkerLevel level, Double baseSalary, Department department) {
         this.name = name;
         this.level = level;
         this.baseSalary = baseSalary;
@@ -77,7 +77,7 @@ public class Worker {
             int ano = calendar.get(Calendar.YEAR);
             int mes = calendar.get(Calendar.MONTH) + 1; //no Calendar, os meses iniciam-se em zero 0
             if(year == ano && month == mes){
-                sum += c.getValuePerHour();
+                sum += c.totalValue();
             }
         }
         return sum;
